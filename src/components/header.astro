@@ -1,0 +1,31 @@
+---
+interface Head{
+    title?: string;
+}
+const {page_title ="Kevin Aguirre"} = Astro.props
+---
+
+<head>
+    <meta charset="utf-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{page_title}</title>
+    <header class="bg-gray-900">
+        <ul class="text-white py-5 text-center text-xl">
+            <a href="/"><li class="hmenu">Inicio</li></a>
+            <li class="hmenu">Habilididades</li>
+            <li class="hmenu">Proyectos</li>
+            <li class="hmenu">gh icon</li>
+            <li class="hmenu">CV icon</li>
+            <li class="hmenu">Email icon</li>
+        </ul>
+    </header>
+</head>
+<style>
+    .hmenu{
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+</style>

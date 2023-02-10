@@ -1,0 +1,34 @@
+---
+const profile = await fetch ("https://api.github.com/users/keaguirre")
+const repos = await fetch ("https://api.github.com/users/keaguirre/repos")
+const gh_profile = await profile.json()
+const gh_repos = await repos.json()
+import Card from '../components/cards.astro'
+import Header from '../components/header.astro'
+---
+
+<html lang="es">
+	<Header></Header>
+	<body>
+		<!-- <section>
+			<h1>{gh_profile.name}</h1>
+			<img src={gh_profile.avatar_url}>
+			<p>{gh_profile.bio}</p>
+		</section> -->
+		<section><!--Keaguirre-->
+			<h1>Kevin Aguirre</h1>
+			<img src="https://avatars.githubusercontent.com/u/101673253?s=400&u=b722b171e9bedc51280f5ede1ff91ad2aac79cea&v=4">
+			<p>Estudiante Analista programador en Duoc UC. Experiencia con linux en CentOS/Rhel y otras distros.</p>
+		</section>
+		<section>
+			<!-- .map is not a function si llego el limite de api gh -->
+			<h1>Proyectos</h1><hr>
+			<!-- {
+				gh_repos.map(gh_repos=>(//iterar en los repos y sacar la data
+				//Card component
+				<Card title={gh_repos.name} description={gh_repos.description}></Card>
+				))
+			} -->
+		</section>	
+	</body>
+</html>

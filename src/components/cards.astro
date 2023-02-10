@@ -1,0 +1,11 @@
+---
+interface Props{
+    title?: string;
+    description?: string;
+}
+const {title = "Titulo repositorio", description = "Descripción repositorio"} = Astro.props
+---
+<div class="bground">
+    <h2>{title}</h2>
+    <p>{description}</p>
+</div><hr>
